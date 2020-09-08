@@ -49,6 +49,8 @@ char* strip(char* str) {
   return result;
 }
 
+	
+
 /*
  * Return true (1) if the given string is "clean", i.e., has
  * no spaces at the front or the back of the string.
@@ -66,7 +68,7 @@ int is_clean(char* str) {
   // 0 if they're equal, and a positive value if the first is
   // greater than the second.
   result = strcmp(str, cleaned);
-
+  free(cleaned);
   return result == 0;
 }
 
@@ -90,6 +92,6 @@ int main() {
       printf("The string '%s' is NOT clean.\n", strings[i]);
     }
   }
-
+  
   return 0;
 }
